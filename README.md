@@ -1,2 +1,3 @@
 # Booky
-Web library project using Spring Boot & Thymeleaf
+Web Application for Library Management using Java - Spring boot
+
