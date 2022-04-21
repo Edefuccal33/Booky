@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit publisher</title>
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i}">
+    <link rel="stylesheet" th:href="@{/https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/styles.min.css}">
+</head>
+
+<body>
+    
+    <nav th:replace="fragments/navbar :: navbar"></nav>
+
+    <main class="page registration-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Update author</h2>
+                </div>
+            </div>
+            <div class="container">
+                <form th:action="@{/publisher/publisher-update/{id}(id=${publisher.getId()})}" th:object="${publisher}" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Name</label>
+                        <input class="form-control item" type="text" th:field="*{name}" id="name" placeholder="Name">
+                        <span style="color: red;" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="createdAt">Date Up</label>
+                        <input class="form-control item" type="date" th:field="*{createdAt}" id="createdAt">
+                        <span style="color: red;" th:if="${#fields.hasErrors('createdAt')}" th:errors="*{createdAt}"></span>
+                    </div>
+                    <div role="group" class="btn-group">
+                        <a th:href="@{/publisher}">
+                            <button class="btn btn-danger btn-space" type="button">Cancel</button>
+                        </a>
+                        <button class="btn btn-success btn-block" type="submit">Confirm</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer th:replace="fragments/footer :: footer"></footer>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+</body>
+
+</html>

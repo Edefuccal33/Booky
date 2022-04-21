@@ -1,0 +1,50 @@
+<nav th:fragment="navbar" class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container"><a class="navbar-brand logo" th:href="@{/index}">Booky</a><button data-toggle="collapse" data-target="#navcol-1" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav mr-auto">
+                            <img src="../" alt="">
+                            <!--DROPDOWN AUTHORS -->
+                            <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Authors</a>
+                                <div role="menu" class="dropdown-menu">
+                                    <a role="presentation" class="dropdown-item" th:href="@{/author}">Show all authors</a>
+                                    <a role="presentation" class="dropdown-item" th:href="@{/author/new}">Create author</a>
+                                </div>
+                            </li>
+                            <!--DROPDOWN PUBLISHER -->
+                            <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Publishers</a>
+                                <div role="menu" class="dropdown-menu">
+                                    <a role="presentation" class="dropdown-item" th:href="@{/publisher}">Show all publishers</a>
+                                    <a role="presentation" class="dropdown-item" th:href="@{/publisher/new}">Create publisher</a>
+                                </div>
+                            </li>
+                            <!--DROPDOWN LIBRO -->
+                            <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Books</a>
+                                <div role="menu" class="dropdown-menu">
+                                    <a role="presentation" class="dropdown-item" th:href="@{/book}">Show all books</a>
+                                    <a role="presentation" class="dropdown-item" th:href="@{/book/form-book}">Create book</a>
+                                </div>
+                            </li>
+                            <!--DROPDOWN CUSTOMER -->
+                            <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Customers</a>
+                                <div role="menu" class="dropdown-menu">
+                                    <a role="presentation" class="dropdown-item" th:href="@{/customer}">Show all customers</a>
+                                    <a role="presentation" class="dropdown-item" th:href="@{/customer/new}">Create customer</a>
+                                </div>
+                            </li>
+                            <!--DROPDOWN LOANS -->
+                            <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link" href="#">Loans</a>
+                                <div role="menu" class="dropdown-menu">
+                                    <a role="presentation" class="dropdown-item" th:href="@{/loan}">Show active loans</a>
+                                    <a role="presentation" class="dropdown-item" th:href="@{/loan/new}">Create loan</a>
+                                </div>
+                            </li>                          
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</nav>

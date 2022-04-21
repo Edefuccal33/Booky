@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Welcome to Booky</title>
+    <link rel="stylesheet" th:href="@{/assets/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/styles.min.css}">
+</head>
+
+<body>
+    
+    <nav th:replace="fragments/navbar :: navbar"></nav>
+
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style= "color: rgba(9, 162, 255, 0.85);">
+            <div class="text">
+                <h2>It is great to have you here with us!</h2>
+                <p>This is what you can perform with Booky:</p>
+                
+                <div class="row features">
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name">Customer&#39;s Management</h3>
+                        <hr>
+                        <p class="description">Register new customers, adding name, last name. document and phone number.</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name">Book&#39;s Management</h3>
+                        <hr>
+                        <p class="description">Register new books, adding title, ISBN, published year, number of copies, author and publisher.</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-4 item">
+                        <h3 class="name">Loan&#39;s Management</h3>
+                        <hr>
+                        <p class="description">Keep track of the copies that you have given away as a loan. It only works if there are copies enough to be borrowed. </p>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="/assets/js/script.min.js"></script>
+</body>
+
+</html>
